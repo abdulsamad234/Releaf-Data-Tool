@@ -1,0 +1,78 @@
+body{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#btn-group-home{
+  margin-top: 50px;
+  width: 500px;
+}
+#btn-group-home a{
+  height: 50px;
+  font-size: 24px;
+  text-align: left;
+}
+.home-icons{
+  float: right;
+}
+#body-main-input{
+  width: 700px;
+}
+#merge-button{
+  font-size: 16px;
+  width:80px;
+  border-radius: 0;
+}
+.form-label{
+  float: left;
+}
+.clear{
+  clear: both;
+}
+#body-main-solve{
+  width: 800px;
+  margin-top: 300px;
+}
+.float-left{
+  float: left;
+}
+.float-right{
+  float: right;
+}
+#exit-button{
+  width: 30px;
+  height: 30px;
+  background: #ee5566;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+#exit-button-link :hover{
+  text-decoration: none;
+  background: #ff6677;
+}
+.top{
+  width: 100%;
+}
+.platform{
+  text-align: left;
+}
+.input{
+  text-align: left;
+}
+.radio-btn{
+  float:left;
+}
+.table-well{
+  background-color: white;
+}
+.confirm-button{
+  width: 200px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+}
