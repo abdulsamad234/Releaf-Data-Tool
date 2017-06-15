@@ -5,9 +5,3 @@ $(document).on('submit', '#submitAnalystNameForm', function(){
   });
   return false;
 });
-// $(document).on('submit', '#newEntryForm', function(){
-//   $.post('actions/validate_input_file.php', $(this).serialize()).done(function(data){
-//     alert(data);
-//   })
-//   return false;
-// })

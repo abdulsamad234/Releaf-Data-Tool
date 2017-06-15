@@ -12,7 +12,7 @@
         <p><strong>There was/were conflict(s): The company id from test_1.csv already exists on the platform.</strong></p>
       </div>
     </div>
-    <form enctype= "multipart/form-data" id = "newEntryForm" method = "post" class = "form" action = "new.php">
+    <form enctype= "multipart/form-data" id = "newEntryForm" method = "post" class = "form">
       <div class = "form-group">
         <label class = "form-label" for = "input-file">Input file(s) --- Enter the csv files to merge</label>
         <div class = "clear"></div>
@@ -24,3 +24,4 @@
     </form>
   </div>
 </div>
+<script type = "text/javascript" src = "js/papaparse.min.js"></script>
