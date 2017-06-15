@@ -76,3 +76,6 @@ body{
   font-size: 18px;
   font-weight: bold;
 }
+.view-all-body{
+  overflow: scroll;
+}

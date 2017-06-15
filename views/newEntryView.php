@@ -5,12 +5,16 @@
   </div>
   <div class = "input-body well">
     <div class = "alert-for-upload">
+      <?php if($argv["success"] == true):?>
       <div class = "alert alert-success">
         <p>All import files were merged successfully.</p>
       </div>
+    <?php endif;?>
+      <?php if($argv["errors"] != ""):?>
       <div class = "alert alert-danger">
-        <p><strong>There was/were conflict(s): The company id from test_1.csv already exists on the platform.</strong></p>
+        <p><strong>There was/were conflict(s):</strong><?php echo $argv["errors"]?></p>
       </div>
+    <?php endif;?>
     </div>
     <form enctype= "multipart/form-data" id = "newEntryForm" method = "post" class = "form">
       <div class = "form-group">

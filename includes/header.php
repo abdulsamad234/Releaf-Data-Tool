@@ -28,7 +28,6 @@
       <ul class = "dropdown-menu" aria-labelledby="dropdownMenu">
         <li><a href = "index.php">Homepage</a></li>
         <li><a href = "new.php">New</a></li>
-        <li><a href = "platform.php">View Platform</a></li>
         <li role = "separator" class = "divider"></li>
         <li><a href = "resolve-conflicts.php">Resolve Conflicts</a></li>
       </ul>

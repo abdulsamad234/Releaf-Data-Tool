@@ -1,21 +1,18 @@
-<?php
-$data = $_POST["data"];
-?>
 <div class = "container-fluid" id = "body-main-solve">
   <div class = "well">
     <div class = "top">
       <div class = "float-left">
         <h1>Resolve Conflicts</h1>
-        <h3>Conflict No: 2 of 324</h3>
+        <h3>Conflict No: <?php echo $argv["conflict_number"];?> of <?php echo $argv["conflict_counts"];?></h3>
       </div>
       <div class = "float-right">
-        <a href = "#" id = "exit-button-link"><div id = "exit-button">x</div></a>
+        <a href = "close.php" id = "exit-button-link"><div id = "exit-button">x</div></a>
       </div>
       <div class = "clear"></div>
     </div>
     <hr/>
     <div class = "body-solve">
-      <form>
+      <form method = "post" action = "each_conflict.php">
         <div class = "float-left">
           <input type = "radio" name = "to-commit" value = "1" class = "radio-btn">
           <div class = "platform">
@@ -23,15 +20,15 @@ $data = $_POST["data"];
             <div class = "well table-well">
               <table class = "table">
                 <thead>
-                  <th>Column ID</th>
-                  <th>Name</th>
-                  <th>number of employees<th>
+                  <?php foreach($argv["conflict_headers"] as $header):?>
+                    <th><?php echo $header?></th>
+                  <?php endforeach;?>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>2</td>
-                    <td>Google</td>
-                    <td>500</td>
+                    <?php foreach($argv["real_conflicts"][1] as $out):?>
+                      <td><?php echo $out;?></td>
+                    <?php endforeach;?>
                   </tr>
                 </tbody>
               </table>
@@ -43,21 +40,22 @@ $data = $_POST["data"];
             <div class = "well table-well">
               <table class = "table">
                 <thead>
-                  <th>Column ID</th>
-                  <th>Name</th>
-                  <th>number of employees<th>
+                  <?php foreach($argv["conflict_headers"] as $header):?>
+                    <th><?php echo $header?></th>
+                  <?php endforeach;?>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>2</td>
-                    <td>Google</td>
-                    <td>50</td>
+                    <?php foreach($argv["real_conflicts"][0] as $out):?>
+                      <td><?php echo $out;?></td>
+                    <?php endforeach;?>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
         </div>
+        <input type = "hidden" name = "organization_name" value = "<?php echo $argv['real_conflicts'][0][1];?>">
         <div class = "float-right">
           <button class = "btn confirm-button">Confirm -></button>
         </div>

@@ -4,7 +4,7 @@
     <p>Enter your full name below and start resolving conflicts</p>
   </div>
   <div class = "well">
-    <form class = "form" method = "post" id = "submitAnalystNameForm">
+    <form class = "form" method = "post" id = "submitAnalystNameForm" action = "actions/resolve-conflicts.php">
       <div class = "form-group">
         <label for = "full-name" class = "form-label">Full Name</label>
         <input class = "form-control" id = "analyst_name" type = "text" name = "analyst_name" placeholder = "Full Name..." required="required">

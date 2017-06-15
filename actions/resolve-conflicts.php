@@ -4,4 +4,5 @@
     $_SESSION["analyst_logged_in"] = true;
     $_SESSION["analyst_name"] = $_POST["analyst_name"];
   }
+  Header("Location: ../each_conflict.php");
 ?>
